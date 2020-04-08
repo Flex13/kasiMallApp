@@ -1,0 +1,301 @@
+/*
+Template Name     : Kasi Mall Online
+Author Name       : Sibanye Bukani
+Author Email      : sibanyebukani01@gmail.com
+Theme Ver         : 1.1
+*/
+
+/* General Styles */
+
+body{
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333333;
+    background: #f0f0f0;
+    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
+    padding-bottom: 1000px;
+}
+
+/* Top Styles */
+
+#top{
+    background: black;
+    padding: 10px;
+}
+#top .offer{
+    color: #ffffff;
+}
+#top .offer .btn{
+    text-transform: uppercase;
+    background: #ff9800;
+    border: none;
+}
+@media(max-width: 991px){
+    #top .offer{
+        margin-bottom: 10px;
+    }
+}
+@media(max-width: 991px){
+    #top{
+        font-size: 12px;
+        text-align: center;
+    }
+}
+#top a{
+    color: #ffffff;
+}
+#top ul.menu{
+    padding-top: 5px;
+    margin: 0px;
+    text-align: right;
+    font-size: 12px;
+    list-style: none;
+}
+@media(max-width: 991px){
+    #top ul.menu{
+        text-align: center;
+    }
+}
+#top ul.menu > li{
+    display: inline-block;
+}
+#top ul.menu > li a{
+    color: #eeeeee;
+}
+#top ul.menu > li + li:before{
+    content: "|\00a0";
+    color: #f7f7f7;
+    padding: 0 5px;
+}
+
+#top a{
+    color: #ffffff;
+}
+#top ul.menu{
+    padding-top: 5px;
+    margin: 0px;
+    text-align: right;
+    font-size: 12px;
+    list-style: none;
+}
+
+@media(max-width: 991px){
+    #top ul.menu{
+        text-align: center;
+    }
+}
+#top ul.menu > li{
+    display: inline-block;
+}
+#top ul.menu > li a{
+    color: #eeeeee;
+}
+#top ul.menu > li + li:before{
+    content: "|\00a0";
+    color: #f7f7f7;
+    padding: 0 5px;
+}
+
+/* Header Styles */
+
+.navbar{
+    background: #ffffff;
+    padding: 0;
+}
+
+.navbar-brand{
+    float: left;
+    font-size: 18px;
+    line-height: 20px;
+    height: 70px;
+    width: 20%;
+    color: black;
+    font-weight: 500;
+}
+
+.navbar-brand img{
+    max-width: 50px;
+    height:auto;
+    border-radius: 50%;
+    padding: 5px;
+}
+.navbar-brand:hover,
+.navbar-brand:focus{
+    text-decoration: none;
+}
+.navbar ul.nav > li > a{
+    text-transform: uppercase;
+    font-size: 14px;
+    color: black;
+    padding: 10px;
+}
+.navbar ul.nav > li > a:hover{
+    text-decoration: underline;
+}
+
+
+.padding-nav{
+    padding-top: 10px;
+}
+.btn-primary{
+    color: rgb(255, 255, 255);
+    background: rgb(79, 191, 168);
+    border: none;
+}
+
+#search .navbar-form{
+    float: right;
+}
+
+/* Slider */
+#slider {
+    padding: 25px;
+}
+
+#slider img{
+    width: 100%;
+    height: 600px;
+}
+@media(max-width: 319px){
+    #slider img{
+        width: 100%;
+        height: 100px;
+        display: hidden;
+    }
+}
+@media(max-width: 375px){
+    #slider img{
+        width: 100%;
+        height: 200px;
+    }
+}
+@media(max-width: 425px){
+    #slider img{
+        width: 100%;
+        height: 300px;
+    }
+}
+
+@media(max-width: 768px){
+    #slider img{
+        width: 100%;
+        height: 500px;
+    }
+}
+
+
+/* advantages Styles */
+
+#advantages{
+    text-align: center;
+}
+
+.box{
+    background: #ffffff;
+    margin: 0 0 30px;
+    border: solid 1px #e6e6e6;
+    box-sizing: border-box;
+    padding: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, .3);
+}
+
+#advantages .box .icon{
+    font-size: 70px;
+    width: 100%;
+    text-align: center;
+    float: left;
+    color: blue;
+    box-sizing: border-box;
+    z-index: 1;
+    color: #ff9800;
+}
+
+#advantages .box h4{
+    position: relative;
+    margin: 0 0 20px;
+    z-index: 2;
+}
+
+#advantages .box h4 a{
+    color: Black;
+
+}
+
+#advantages .box h4 a:hover{
+    text-decoration: none;
+}
+#advantages .box p{
+    position: relative;
+    z-index: 2;
+    color: #555555;
+
+}
+
+/* Latest Products Styles */
+
+#hot h2{
+    font-size: 36px;
+    font-weight: 400;
+    color: #ff9800;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#content{
+    padding-left: 25px; 
+ }
+ .single{
+     width: 290px;
+ }
+
+ @media(max-width:768px){
+    .single{
+        width: 60%;
+        margin: 0 auto;
+    }
+}
+
+#content .product{
+    background: #ffffff;
+    border: solid 1px #e6e6e6;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+}
+
+#content .product .text{
+    padding: 10px 10px 0px;
+}
+
+#content .product .text p.price{
+    font-size: 18px;
+    text-align: center;
+    font-weight: 400;
+}
+
+#content .product .text h5.location{
+    font-size: 15px;
+    text-align: center;
+    font-weight: 400;
+}
+
+#content .product .text .button{
+    text-align: center;
+    clear: both;
+}
+
+#content .product .text .button .btn{
+    margin-bottom: 10px;
+}
+
+#content .product .text h3{
+    text-align: center;
+    font-size: 25px;
+}
+
+#content .product .text h3 a{
+    color: rgb(85, 85, 85);
+}
+
+
+
