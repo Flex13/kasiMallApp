@@ -1,71 +1,7 @@
 <?php include 'includes/header.php'; ?>
+<?php include 'includes/navbar.php'; ?>
 
-<body>
-    <!-- Top Nav -->
-    <div id="top">
-        <!-- Container Begin -->
-        <div class="container-fluid">
-            <!-- Container Row Begin -->
-            <div class="row">
-                <!-- Col 6 Offer Begin -->
-                <div class="col-md-6 offer">
-                    <a href="#" class="btn btn-success btn-sm">Welcome</a>
-                    <a href="checkout.php">4 Items In Your Cart | Total Price: R300 </a>
-                </div>
-                <!-- End Col 6 Offer Begin -->
-                <!-- col-md-6 Begin -->
-                <div class="col-md-6">
-                    <!-- cmenu Begin -->
-                    <ul class="menu">
-                        <li>
-                            <a href="checkout.php">My Account</a>
-                        </li>
-                        <li>
-                            <a href="cart.php"><i class="fa fa-shopping-cart"></i> Go To Cart</a>
-                        </li>
-                        <li>
-                            <a href="checkout.php">Login</a>
-                        </li>
-                    </ul>
-                    <!-- menu Finish -->
-                </div><!-- col-md-6 Finish -->
-            </div><!-- End Container Row Begin -->
-        </div><!-- End Container Begin -->
-    </div><!-- End Top Nav -->
 
-<!-- Brand Nav start -->
-    <section> 
-        <div class="container-fluid center justify-content-center" style="margin: 0 auto;">
-            <div class="brand">
-                <center><a href="#">KASI MALL ONLINE</a></center>
-            </div>
-        </div>
-    </section>
-    <!-- Brand Nav End -->
-
-    <!-- Main Nav start -->
-    <section>
-        <div class="navbar navbar-expand-lg nav justify-content-center sticky-top">
-            <div class="container-fluid m-0 p-0">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarcollapseCMS">
-                    <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarcollapseCMS">
-                    <ul class="navbar-nav mx-auto">
-                        <li>
-                            <a href="#" class="nav-link">Register</a>
-                        </li>
-                        <li>
-                            <a href="#" class="nav-link">Merchant</a>
-                        </li>
-                        <li>
-                            <a href="#" class="nav-link">Driver</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-    </section>
-<!-- Main Nav start -->
 
 
     <!-- Slider Container Start -->
