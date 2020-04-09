@@ -116,3 +116,55 @@ body{
     width: 100%;
 }
 
+
+
+/* Header Styles */
+
+.navbar{
+    background: #ffffff;
+    padding: 0;
+}
+
+.navbar-brand{
+    float: left;
+    font-size: 18px;
+    line-height: 20px;
+    height: 70px;
+    width: 20%;
+    color: black;
+    font-weight: 500;
+}
+
+.navbar-brand img{
+    max-width: 50px;
+    height:auto;
+    border-radius: 50%;
+    padding: 5px;
+}
+.navbar-brand:hover,
+.navbar-brand:focus{
+    text-decoration: none;
+}
+.navbar ul.nav > li > a{
+    text-transform: uppercase;
+    font-size: 14px;
+    color: black;
+    padding: 10px;
+}
+.navbar ul.nav > li > a:hover{
+    text-decoration: underline;
+}
+
+
+.padding-nav{
+    padding-top: 10px;
+}
+.btn-primary{
+    color: rgb(255, 255, 255);
+    background: rgb(79, 191, 168);
+    border: none;
+}
+
+#search .navbar-form{
+    float: right;
+}
