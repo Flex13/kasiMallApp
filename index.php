@@ -122,11 +122,11 @@
         <!-- row Content Begin -->
         <div class="row">
             <!-- col-sm-4 col-sm-6 single Begin -->
-            <div class="col-sm-4 col-sm-6  col-lg-4  single">
+            <div class="col-md-4 col-sm-12 col-lg-4 center-responsive">
                 <!-- product Begin -->
                 <div class="product">
                     <a href="details.php">
-                        <img class="img-fluid" src="admin_area/product_images/food.jpg" alt="Product 1">
+                        <img class="img-fluid product-image" src="admin_area/product_images/food.jpg" alt="Product 1">
                     </a>
                     <!-- text Begin -->
                     <div class="text">
@@ -145,11 +145,11 @@
             <!-- col-sm-4 col-sm-6 single End -->
 
             <!-- col-sm-4 col-sm-6 single Begin -->
-            <div class="col-sm-4 col-sm-6  col-lg-4  single">
+            <div class="col-md-4 col-sm-12 col-lg-4 center-responsive">
                 <!-- product Begin -->
                 <div class="product">
                     <a href="details.php">
-                        <img class="img-fluid" src="admin_area/product_images/spinza2.jpg" alt="Product 1">
+                        <img class="img-fluid product-image" src="admin_area/product_images/spinza2.jpg" alt="Product 1">
                     </a>
                     <!-- text Begin -->
                     <div class="text">
@@ -168,11 +168,11 @@
             <!-- col-sm-4 col-sm-6 single End -->
 
             <!-- col-sm-4 col-sm-6 single Begin -->
-            <div class="col-sm-4 col-sm-6 col-lg-4 single">
+            <div class="col-md-4 col-sm-12 col-lg-4 center-responsive">
                 <!-- product Begin -->
                 <div class="product">
                     <a href="details.php">
-                        <img class="img-fluid" src="admin_area/product_images/spinza.jpg" alt="Product 1">
+                        <img class="img-fluid product-image" src="admin_area/product_images/spinza.jpg" alt="Product 1">
                     </a>
                     <!-- text Begin -->
                     <div class="text">

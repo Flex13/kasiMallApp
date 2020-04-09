@@ -3,7 +3,7 @@
 <!-- #content Begin -->
 <div id="content">
     <!-- container Begin -->
-    <div class="container-fluid">
+    <div class="container">
         <!-- row Begin -->
         <div class="row">
             <!-- col-md-12 Begin -->
@@ -11,7 +11,7 @@
                 <!-- breadcrumb Begin -->
                 <ul class="breadcrumb">
                     <li>
-                        <a href="index.php">Home</a>
+                        <a class="p-1" href="index.php">Home </a>
                     </li>
                     <li>
                         Shop
@@ -60,7 +60,7 @@
                     <div class="col-md-6 col-sm-12 col-lg-6 center-responsive">
                         <!-- product Begin -->
                         <div class="product">
-                            <a href="details.php"><img class="img-fluid" src="admin_area/product_images/food.jpg" alt="Product 1"></a>
+                            <a href="details.php"><img class="img-fluid product-image" src="admin_area/product_images/food.jpg" alt="Product 1"></a>
                             <!-- text Begin -->
                             <div class="text">
                                 <h3><a href="details.php">Amapapa</a></h3>
@@ -68,7 +68,7 @@
                                 <p class="price">$30</p>
                                 <p class="button">
                                     <a href="details.php" class="btn btn-default">View Details</a>
-                                    <a href="details.php" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Add To Cart</a>
+                                    <a href="cart.php" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Add To Cart</a>
                                 </p>
                             </div>
                             <!-- text Finish -->
@@ -81,7 +81,7 @@
                     <div class="col-md-6 col-sm-12 col-lg-6 center-responsive">
                         <!-- product Begin -->
                         <div class="product">
-                            <a href="details.php"><img class="img-fluid" src="admin_area/product_images/food.jpg" alt="Product 1"></a>
+                            <a href="details.php"><img class="img-fluid product-image" src="admin_area/product_images/food.jpg" alt="Product 1"></a>
                             <!-- text Begin -->
                             <div class="text">
                                 <h3><a href="details.php">Amapapa</a></h3>
@@ -106,7 +106,7 @@
                     <div class="col-md-6 col-sm-12 col-lg-6 center-responsive">
                         <!-- product Begin -->
                         <div class="product">
-                            <a href="details.php"><img class="img-fluid" src="admin_area/product_images/food.jpg" alt="Product 1"></a>
+                            <a href="details.php"><img class="img-fluid product-image" src="admin_area/product_images/food.jpg" alt="Product 1"></a>
                             <!-- text Begin -->
                             <div class="text">
                                 <h3><a href="details.php">Amapapa</a></h3>
@@ -114,7 +114,7 @@
                                 <p class="price">$30</p>
                                 <p class="button">
                                     <a href="details.php" class="btn btn-default">View Details</a>
-                                    <a href="details.php" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Add To Cart</a>
+                                    <a href="cart.php" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Add To Cart</a>
                                 </p>
                             </div>
                             <!-- text Finish -->
@@ -127,7 +127,7 @@
                     <div class="col-md-6 col-sm-12 col-lg-6 center-responsive">
                         <!-- product Begin -->
                         <div class="product">
-                            <a href="details.php"><img class="img-fluid" src="admin_area/product_images/food.jpg" alt="Product 1"></a>
+                            <a href="details.php"><img class="img-fluid product-image" src="admin_area/product_images/food.jpg" alt="Product 1"></a>
                             <!-- text Begin -->
                             <div class="text">
                                 <h3><a href="details.php">Amapapa</a></h3>
@@ -135,7 +135,7 @@
                                 <p class="price">$30</p>
                                 <p class="button">
                                     <a href="details.php" class="btn btn-default">View Details</a>
-                                    <a href="details.php" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Add To Cart</a>
+                                    <a href="cart.php" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Add To Cart</a>
                                 </p>
                             </div>
                             <!-- text Finish -->
@@ -145,17 +145,21 @@
                     <!-- col-md-6 col-sm-12 col-lg-6 center-responsive end -->
                 </div>
                 <!-- Row End -->
-                <center>
+                <nav aria-label="...">
                     <ul class="pagination">
-                        <li class="active;"><a href="#">First Page</a></li>
-                        <li><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li><a href="#">Last Page</a></li>
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item active" aria-current="page">
+                            <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Next</a>
+                        </li>
                     </ul>
-                </center>
+                </nav>
             </div>
             <!-- col-md-9 End -->
         </div>

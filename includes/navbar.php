@@ -70,7 +70,7 @@
                             <a href="checkout.php" class="nav-link">My Account</a>
                         </li>
                         <li>
-                            <a href="cart.php.php" class="nav-link">Shopping Cart</a>
+                            <a href="cart.php" class="nav-link">Shopping Cart</a>
                         </li>
                         <li>
                             <a href="contact.php.php" class="nav-link">Contact Us</a>

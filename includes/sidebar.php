@@ -1,7 +1,7 @@
 <!-- panel panel-default sidebar-menu Begin -->
 <div class="panel card sidebar-menu">
     <!-- panel-heading Begin -->
-    <div class="card-header">
+    <div class="header-card">
         <h3 class="card-title">Products Categories</h3>
     </div>
     <!-- panel-heading Finish -->
@@ -24,7 +24,7 @@
 <!-- panel panel-default sidebar-menu Begin -->
 <div class="panel card sidebar-menu">
     <!-- panel-heading Begin -->
-    <div class="card-header">
+    <div class="header-card">
         <h3 class="card-title">Categories</h3>
     </div>
     <!-- panel-heading Finish -->
