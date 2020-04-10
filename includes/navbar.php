@@ -73,7 +73,7 @@
                             <a href="cart.php" class="nav-link">Shopping Cart</a>
                         </li>
                         <li>
-                            <a href="contact.php.php" class="nav-link">Contact Us</a>
+                            <a href="contact.php" class="nav-link">Contact Us</a>
                         </li>
                     </ul>
                 </div>

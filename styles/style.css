@@ -398,20 +398,15 @@ img.img-fluid.product-image {
 .breadcrumb {
     padding: 8px 15px;
     margin-bottom: 20px;
+    background: #ffffff;
     border-radius: 5px;
-    color: #7E8082;
-    background: transparent;
-    font-weight: 500;
-    font-size: 15px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, .5);
 }
-
-
 
 
 .breadcrumb>li+li:before {
     content: ">\00a0";
     color: #7E8082;
-    font-weight: bold;
 }
 
 @media(max-width:991px) {
@@ -606,6 +601,15 @@ img.img-fluid.details-image {
 
 .pull-left {
     margin: 10px 0px;
+}
+
+/*  COntact us Styles  */
+
+#content .panel.card {
+    box-sizing: border-box;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, .3);
+    margin: 20px 0px;
+    border: none;
 }
 
 

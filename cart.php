@@ -22,6 +22,8 @@
             <!-- col-md-12 Finish -->
         </div>
         <!-- row End -->
+        <!-- row Begin -->
+        <div class="row">
         <!-- col-md-9 Begin -->
         <div id="cart" class="col-md-9 col-lg-9 col-xl-9">
             <!-- box Begin -->
@@ -91,6 +93,7 @@
                     </div><!-- box-footer Finish -->
                 </form><!-- form Finish -->
 
+
                 <div id="row same-heigh-row" class="row">
                     <!-- #row same-heigh-row Begin -->
                     <div class="col-md-3 col-sm-6 col-lg-3">
@@ -143,8 +146,10 @@
                 <!-- box End -->
             </div>
             <!-- col-md-9 End -->
-
-            <div class="col-md-6 col-lg-6">
+            
+        </div><!-- col-md-9 End -->
+        <!-- col-md-3 start -->
+        <div class="col-md-3 col-lg-3">
                 <!-- col-md-3 Begin -->
 
                 <div id="order-summary" class="box product-box">
@@ -189,8 +194,11 @@
                     </div><!-- table-responsive Finish -->
                 </div><!-- box Finish -->
             </div><!-- col-md-3 Finish -->
-        </div>
+            </div>
+        <!-- row End -->
+
         <!-- container End -->
+
     </div>
     <!-- #content End -->
 
