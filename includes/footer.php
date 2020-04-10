@@ -21,7 +21,7 @@
                 <!-- ul Begin -->
                 <ul>
                     <li><a href="checkout.php">Login</a></li>
-                    <li><a href="customer_register.php">Register</a></li>
+                    <li><a href="customer_register">Register</a></li>
                 </ul>
                 <!-- ul Finish -->
 

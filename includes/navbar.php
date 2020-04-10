@@ -17,7 +17,7 @@
                     <!-- cmenu Begin -->
                     <ul class="menu">
                         <li>
-                            <a href="register.php">Register</a>
+                            <a href="customer_register.php">Register</a>
                         </li>
                         <li>
                             <a href="Merchant.php">Merchant</a>
