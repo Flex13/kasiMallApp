@@ -107,10 +107,7 @@ body {
     padding: 0 5px;
 }
 
-.active {
-    color: black;
-    font-weight: bold;
-}
+
 
 
 
@@ -429,9 +426,13 @@ img.img-fluid.product-image {
     border: none;
 }
 
+#content .panel.sidebar-menu .active {
+    color: black;
+    font-weight: bold;
+}
+
 #content .panel.sidebar-menu ul.nav.category-menu {
     margin-bottom: 20px;
-    text-align: center;
 }
 
 #content .panel.sidebar-menu ul.nav.category-menu li {
@@ -442,6 +443,7 @@ img.img-fluid.product-image {
     text-transform: uppercase;
     font-weight: 500;
     color: #FF7200;
+    font-size: 15px;
 }
 
 #content .panel.sidebar-menu h3 {

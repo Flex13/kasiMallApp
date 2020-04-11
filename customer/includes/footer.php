@@ -9,10 +9,10 @@
                 <h4>Pages</h4>
                 <!-- ul Begin -->
                 <ul>
-                    <li><a href="cart.php">Shopping Cart</a></li>
-                    <li><a href="contact.php">Contact Us</a></li>
-                    <li><a href="shop.php">Shop</a></li>
-                    <li><a href="customer/my_account.php">My Account</a></li>
+                    <li><a href="../cart.php">Shopping Cart</a></li>
+                    <li><a href="../contact.php">Contact Us</a></li>
+                    <li><a href="../applications.html">Shop</a></li>
+                    <li><a href="my_account.php">My Account</a></li>
                 </ul>
                 <!-- ul Finish -->
                 <hr>
@@ -21,7 +21,7 @@
                 <!-- ul Begin -->
                 <ul>
                     <li><a href="checkout.php">Login</a></li>
-                    <li><a href="customer_register">Register</a></li>
+                    <li><a href="../customer_register.php">Register</a></li>
                 </ul>
                 <!-- ul Finish -->
 
@@ -57,7 +57,7 @@
                     <br/><strong>Sibanye Bukani</strong>
                 </p>
                 <!-- p Finish -->
-                <a href="contact.php">Check Our Contact Page</a>
+                <a href="../contact.php">Check Our Contact Page</a>
                 <hr class="d-md-none .d-lg-none">
             </div>
             <!-- col-sm-6 col-md-3 col-lg-3 Finish -->

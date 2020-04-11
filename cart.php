@@ -27,7 +27,7 @@
         <!-- col-md-9 Begin -->
         <div id="cart" class="col-md-9 col-lg-9 col-xl-9">
             <!-- box Begin -->
-            <div class="box">
+            <div class="box product-box">
 
                 <form action="cart.php" method="post" enctype="multipart/form-data">
                     <!-- form Begin -->
@@ -93,8 +93,11 @@
                     </div><!-- box-footer Finish -->
                 </form><!-- form Finish -->
 
+                <!-- box End -->
+            </div>
+            
 
-                <div id="row same-heigh-row" class="row">
+            <div id="row same-heigh-row" class="row">
                     <!-- #row same-heigh-row Begin -->
                     <div class="col-md-3 col-sm-6 col-lg-3">
                         <!-- col-md-3 col-sm-6 col-lg-3 Begin -->
@@ -143,8 +146,6 @@
                         </div><!-- product same-height Finish -->
                     </div><!-- col-md-3 col-sm-6 center-responsive Finish -->
                 </div>
-                <!-- box End -->
-            </div>
             <!-- col-md-9 End -->
             
         </div><!-- col-md-9 End -->

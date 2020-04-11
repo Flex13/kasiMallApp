@@ -9,7 +9,7 @@
                 <!-- Col 6 Offer Begin -->
                 <div class="col-md-6 offer">
                     <a href="#" class="btn btn-success btn-sm">Welcome</a>
-                    <a href="cart.php">4 Items In Your Cart | Total Price: R300 </a>
+                    <a href="../cart.php">4 Items In Your Cart | Total Price: R300 </a>
                 </div>
                 <!-- End Col 6 Offer Begin -->
                 <!-- col-md-6 Begin -->
@@ -17,19 +17,19 @@
                     <!-- cmenu Begin -->
                     <ul class="menu">
                         <li>
-                            <a href="customer_register.php">Register</a>
+                            <a href="../customer_register.php">Register</a>
                         </li>
                         <li>
-                            <a href="Merchant.php">Merchant</a>
+                            <a href="../Merchant.php">Merchant</a>
                         </li>
                         <li>
-                            <a href="checkout.php">Driver</a>
+                            <a href="../checkout.php">Driver</a>
                         </li>
                         <li>
-                            <a href="customer/my_account.php">My Account</a>
+                            <a href="my_account.php">My Account</a>
                         </li>
                         <li>
-                            <a href="cart.php"><i class="fa fa-shopping-cart"></i> Go To Cart</a>
+                            <a href="../cart.php"><i class="fa fa-shopping-cart"></i> Go To Cart</a>
                         </li>
                         <li>
                             <a href="checkout.php">Login</a>
@@ -45,7 +45,7 @@
     <section> 
         <div class="container-fluid center justify-content-center" style="margin: 0 auto;">
             <div class="brand">
-                <center><a href="index.php">KASI MALL ONLINE</a></center>
+                <center><a href="../index.php">KASI MALL ONLINE</a></center>
             </div>
         </div>
     </section>
@@ -61,19 +61,19 @@
                 <div class="collapse navbar-collapse" id="navbarcollapseCMS">
                     <ul class="navbar-nav mx-auto">
                         <li>
-                            <a href="index.php" class="nav-link">Home</a>
+                            <a href="../index.php" class="nav-link">Home</a>
                         </li>
                         <li>
-                            <a href="shop.php" class="nav-link">shop</a>
+                            <a href="../shop.php" class="nav-link">shop</a>
                         </li>
                         <li>
-                            <a href="customer/my_account.php" class="nav-link">My Account</a>
+                            <a href="my_account.php" class="nav-link">My Account</a>
                         </li>
                         <li>
-                            <a href="cart.php" class="nav-link">Shopping Cart</a>
+                            <a href="../cart.php" class="nav-link">Shopping Cart</a>
                         </li>
                         <li>
-                            <a href="contact.php" class="nav-link">Contact Us</a>
+                            <a href="../contact.php" class="nav-link">Contact Us</a>
                         </li>
                     </ul>
                 </div>
