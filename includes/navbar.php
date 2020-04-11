@@ -1,4 +1,3 @@
-
 <body>
     <!-- Top Nav -->
     <div id="top">
@@ -20,10 +19,10 @@
                             <a href="customer_register.php">Register</a>
                         </li>
                         <li>
-                            <a href="Merchant.php">Merchant</a>
+                            <a href="customer_register.php">Merchant</a>
                         </li>
                         <li>
-                            <a href="checkout.php">Driver</a>
+                            <a href="customer_register.php">Driver</a>
                         </li>
                         <li>
                             <a href="customer/my_account.php">My Account</a>
@@ -41,8 +40,8 @@
         </div><!-- End Container Begin -->
     </div><!-- End Top Nav -->
 
-<!-- Brand Nav start -->
-    <section> 
+    <!-- Brand Nav start -->
+    <section>
         <div class="container-fluid center justify-content-center" style="margin: 0 auto;">
             <div class="brand">
                 <center><a href="index.php">KASI MALL ONLINE</a></center>
@@ -60,23 +59,23 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarcollapseCMS">
                     <ul class="navbar-nav mx-auto">
-                        <li>
+                        <li class=" <?php if ($active == 'Home') echo "active"; ?>">
                             <a href="index.php" class="nav-link">Home</a>
                         </li>
-                        <li>
-                            <a href="shop.php" class="nav-link">shop</a>
+                        <li class=" <?php if ($active == 'Shop') echo "active"; ?>">
+                            <a href="shop.php" class="nav-link">Shop</a>
                         </li>
-                        <li>
+                        <li class=" <?php if ($active == 'Account') echo "active"; ?>">
                             <a href="customer/my_account.php" class="nav-link">My Account</a>
                         </li>
-                        <li>
+                        <li class=" <?php if ($active == 'Cart') echo "active"; ?>">
                             <a href="cart.php" class="nav-link">Shopping Cart</a>
                         </li>
-                        <li>
+                        <li class=" <?php if ($active == 'Contact') echo "active"; ?>">
                             <a href="contact.php" class="nav-link">Contact Us</a>
                         </li>
                     </ul>
                 </div>
             </div>
     </section>
-<!-- Main Nav start -->
+    <!-- Main Nav start -->

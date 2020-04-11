@@ -107,9 +107,13 @@ body {
     padding: 0 5px;
 }
 
-.active {
-    color: black;
-    font-weight: bold;
+.navbar ul.nav > li > a:hover{
+    background: #e7e7e7;
+}
+
+.navbar-brand:hover,
+.navbar-brand:focus{
+    text-decoration: none;
 }
 
 
@@ -150,6 +154,12 @@ a.nav-link {
     letter-spacing: 2px;
 }
 
+a:active.nav-link {
+    color: black;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
 a:hover.nav-link {
     color: black;
     font-weight: bolder;
@@ -157,7 +167,7 @@ a:hover.nav-link {
 }
 
 .fa-bars {
-    color: whitesmoke;
+    color: black;
 }
 
 

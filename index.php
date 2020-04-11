@@ -1,3 +1,4 @@
+<?php $active='Home'; ?>
 <?php include 'includes/header.php'; ?>
 <?php include 'includes/navbar.php'; ?>
 
@@ -145,74 +146,7 @@
 <div id="content" class="container">
     <!-- row Content Begin -->
     <div class="row">
-        <!-- col-sm-4 col-sm-6 single Begin -->
-        <div class="col-md-4 col-sm-12 col-lg-4 center-responsive">
-            <!-- product Begin -->
-            <div class="product">
-                <a href="details.php">
-                    <img class="img-fluid product-image" src="admin_area/product_images/food.jpg" alt="Product 1">
-                </a>
-                <!-- text Begin -->
-                <div class="text">
-                    <h3><a href="details.php">Amapapa</a></h3>
-                    <h5 class="location">Vanderbijlpark</h5>
-                    <p class="price">R30</p>
-                    <p class="button">
-                        <a href="details.php" class="btn btn-default">View Details</a>
-                        <a href="details.php" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Add To Cart</a>
-                    </p>
-                </div>
-                <!-- text Finish -->
-            </div>
-            <!-- product Begin -->
-        </div>
-        <!-- col-sm-4 col-sm-6 single End -->
-
-        <!-- col-sm-4 col-sm-6 single Begin -->
-        <div class="col-md-4 col-sm-12 col-lg-4 center-responsive">
-            <!-- product Begin -->
-            <div class="product">
-                <a href="details.php">
-                    <img class="img-fluid product-image" src="admin_area/product_images/spinza2.jpg" alt="Product 1">
-                </a>
-                <!-- text Begin -->
-                <div class="text">
-                    <h3><a href="details.php">Spinza</a></h3>
-                    <h5 class="location">Alex</h5>
-                    <p class="price">R50</p>
-                    <p class="button">
-                        <a href="details.php" class="btn btn-default">View Details</a>
-                        <a href="details.php" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Add To Cart</a>
-                    </p>
-                </div>
-                <!-- text Finish -->
-            </div>
-            <!-- product Begin -->
-        </div>
-        <!-- col-sm-4 col-sm-6 single End -->
-
-        <!-- col-sm-4 col-sm-6 single Begin -->
-        <div class="col-md-4 col-sm-12 col-lg-4 center-responsive">
-            <!-- product Begin -->
-            <div class="product">
-                <a href="details.php">
-                    <img class="img-fluid product-image" src="admin_area/product_images/spinza.jpg" alt="Product 1">
-                </a>
-                <!-- text Begin -->
-                <div class="text">
-                    <h3><a href="details.php">Archar</a></h3>
-                    <h5 class="location">Soweto</h5>
-                    <p class="price">R25</p>
-                    <p class="button">
-                        <a href="details.php" class="btn btn-default">View Details</a>
-                        <a href="details.php" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Add To Cart</a>
-                    </p>
-                </div>
-                <!-- text Finish -->
-            </div>
-            <!-- product Begin -->
-        </div>
-        <!-- col-sm-4 col-sm-6 single End -->
+        <?php getPro(); ?>
     </div>
     <!-- row Content End -->
 </div>

@@ -46,6 +46,21 @@
 
                         <div class="form-group">
                             <!-- form-group Begin -->
+                            <label class="col-md-3 control-label"> Product Location </label>
+                            <div class="col-md-6">
+                                <!-- col-md-6 Begin -->
+                                <select name="product_location" class="form-control">
+                                <option> Select a Location</option>
+                                <option> Alex </option>
+                                <option> Soweto </option>
+                                <option> Sharpeville </option>
+                                </select>
+
+                            </div><!-- col-md-6 Finish -->
+                        </div><!-- form-group Finish -->
+
+                        <div class="form-group">
+                            <!-- form-group Begin -->
                             <label class="col-md-3 control-label"> Product Category </label>
                             <div class="col-md-6">
                                 <!-- col-md-6 Begin -->
@@ -77,7 +92,7 @@
                             <label class="col-md-3 control-label"> Category </label>
                             <div class="col-md-6">
                                 <!-- col-md-6 Begin -->
-                                <select name="product_cat" class="form-control">
+                                <select name="cat" class="form-control">
                                     <!-- form-control Begin -->
                                     <option> Select a Category </option>
                                     <?php
@@ -177,6 +192,7 @@
 if(isset($_POST['submit'])){
     
     $product_title = $_POST['product_title'];
+    $product_location = $_POST['product_location'];
     $product_cat = $_POST['product_cat'];
     $cat = $_POST['cat'];
     $product_price = $_POST['product_price'];
@@ -195,7 +211,7 @@ if(isset($_POST['submit'])){
     move_uploaded_file($temp_name2,"product_images/$product_img2");
     move_uploaded_file($temp_name3,"product_images/$product_img3");
     
-    $insert_product = "insert into products (p_cat_id,cat_id,date,product_title,product_img1,product_img2,product_img3,product_price,product_keywords,product_desc) values ('$product_cat','$cat',NOW(),'$product_title','$product_img1','$product_img2','$product_img3','$product_price','$product_keywords','$product_desc')";
+    $insert_product = "insert into products (p_cat_id,cat_id,date,product_title,product_location,product_img1,product_img2,product_img3,product_price,product_keywords,product_desc) values ('$product_cat','$cat',NOW(),'$product_title','$product_location','$product_img1','$product_img2','$product_img3','$product_price','$product_keywords','$product_desc')";
     
     $run_product = mysqli_query($connect,$insert_product);
     
