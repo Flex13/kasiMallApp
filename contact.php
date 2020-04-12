@@ -40,12 +40,12 @@
             </div>
             <!-- col-md-3  col-lg-3  Sidbar End -->
 
-            <div class="col-md-9">
+            <div class="col-md-9 col-lg-9">
                 <!-- col-md-9 Begin -->
                 <div class="panel card">
                     <!-- box Begin -->
 
-                    <div class="header-card">
+                    <div class="card-header">
                         <!-- box-header Begin -->
                         <center>
                             <!-- center Begin -->
@@ -55,7 +55,10 @@
                                 If you have any questions, feel free to contact us. Our Customer Service work <strong>24/7</strong>
                             </p><!-- text-muted Finish -->
                         </center><!-- center Finish -->
+                        </div>
+                    <!-- box-header Begin -->
 
+                    <div class="card-body">
                         <form action="contact.php" method="post">
                             <!-- form Begin -->
                             <div class="form-group">
@@ -91,13 +94,31 @@
 
                         </form><!-- form Finish -->
                     </div>
-                    <!-- box-header Begin -->
+                        <?php 
+                       
+                       if(isset($_POST['submit'])){
+                           
+                           /// Admin receives message with this ///
+                          
+                           
+                           $sender_name = $_POST['name'];
+                           $sender_email = $_POST['email'];
+                           $sender_subject = $_POST['subject'];
+                           $sender_message = $_POST['message'];
+                           $receiver_email = "sibanyebukani01@gmail.com";
+
+                           Mail::sendMail($sender_subject ,$sender_message, $sender_name);
+                           
+                           echo "<h2 align='center'> Your message has sent successfully </h2>";
+                           
+                       }
+                       
+                       ?>
+                    
                 </div>
                 <!-- box End -->
             </div>
             <!-- col-md-9 End -->
-
-
 
         </div>
         <!-- row end -->

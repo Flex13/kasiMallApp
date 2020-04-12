@@ -34,7 +34,13 @@
                     <!-- form Begin -->
 
                     <h1>Shopping Cart</h1>
-                    <p class="text-muted">You currently have 1 item(s) in your cart</p>
+                    <?php 
+                    $ip_add = getRealIpUser();
+                    $select_cart = "SELECT * FROM cart WHERE ip_add='$ip_add'";
+                    $run_cart = mysqli_query($connect,$select_cart);
+                    $count = mysqli_num_rows($run_cart);
+                    ?>
+                    <p class="text-muted">You currently have <?php echo $count; ?> item(s) in your cart</p>
                     <div class="table-responsive">
                         <!-- table-responsive Begin -->
                         <table class="table">
@@ -54,16 +60,40 @@
 
                             <tbody>
                                 <!-- tbody Begin -->
+
+                            <?php 
+                                
+                                $total = 0;
+                                
+                                while($row_cart = mysqli_fetch_array($run_cart)){
+                                    
+                                    $pro_id = $row_cart['p_id'];
+                                    $pro_size = $row_cart['size'];
+                                    $pro_qty = $row_cart['qty'];
+
+                                    $get_products = "SELECT * FROM products WHERE product_id='$pro_id'";
+                                    $run_products = mysqli_query($connect,$get_products);
+                                    
+                                    while($row_products = mysqli_fetch_array($run_products)){
+                                        
+                                        $product_title = $row_products['product_title'];
+                                        $product_img1 = $row_products['product_img1'];
+                                        $only_price = $row_products['product_price'];
+                                        $sub_total = $row_products['product_price']*$pro_qty;
+                                        $total += $sub_total;
+                                        
+                                ?>
                                 <tr>
                                     <!-- tr Begin -->
-                                    <td><img class="img-fluid" src="admin_area/product_images/food.jpg" alt="Product 3a"> </td>
-                                    <td><a href="#">Amapapa</a></td>
-                                    <td>2</td>
-                                    <td>R40</td>
-                                    <td>Large</td>
-                                    <td><input type="checkbox" name="remove[]"></td>
-                                    <td>R40</td>
+                                    <td><img class="img-fluid" src="admin_area/product_images/<?php echo $product_img1; ?>" alt="Product 3a"> </td>
+                                    <td><a href="details.php?pro_id=<?php echo $pro_id; ?>"> <?php echo $product_title; ?> </a></td>
+                                    <td><?php echo $pro_qty; ?></td>
+                                    <td><?php echo $only_price; ?></td>
+                                    <td><?php echo $pro_size; ?></td>
+                                    <td><input type="checkbox" name="remove[]" value="<?php echo $pro_id; ?>"></td>
+                                    <td>R<?php echo $sub_total; ?></td>
                                 </tr><!-- tr Finish -->
+                                <?php } } ?>
                             </tbody><!-- tbody Finish -->
                             <tbody>
                                 <!-- tbody Begin -->
@@ -96,6 +126,36 @@
 
                 <!-- box End -->
             </div>
+
+            <?php 
+               
+               function update_cart(){
+                   
+                   global $connect;
+                   
+                   if(isset($_POST['update'])){
+                       
+                       foreach($_POST['remove'] as $remove_id){
+                           
+                           $delete_product = "DELETE FROM cart WHERE p_id='$remove_id'";
+                           
+                           $run_delete = mysqli_query($connect,$delete_product);
+                           
+                           if($run_delete){
+                               
+                               echo "<script>window.open('cart.php','_self')</script>";
+                               
+                           }
+                           
+                       }
+                       
+                   }
+                   
+               }
+              
+              echo @$up_cart = update_cart();
+              
+              ?>
             
 
             <div id="row same-heigh-row" class="row">
@@ -107,45 +167,36 @@
                             <h3 class="text-center">Products You Maybe Like</h3>
                         </div><!-- box same-height headline Finish -->
                     </div><!-- col-md-3 col-sm-6 Finish -->
+                    <?php
 
-                    <div class="col-md-3 col-sm-6 justify-content-center">
-                        <!-- col-md-3 col-sm-6 center-responsive Begin -->
-                        <div class="product product-box same-height">
-                            <!-- product same-height Begin -->
-                            <a href="details.php"><img class="img-fluid" src="admin_area/product_images/food.jpg" alt="Product 6"></a>
-                            <div class="text">
-                                <!-- text Begin -->
-                                <h3><a href="details.php">Amapapa</a></h3>
-                                <p class="price">R40</p>
-                            </div><!-- text Finish -->
-                        </div><!-- product same-height Finish -->
-                    </div><!-- col-md-3 col-sm-6 center-responsive Finish -->
+$get_products = "SELECT * FROM products ORDER BY rand() LIMIT 0,3";
+$run_products = mysqli_query($connect, $get_products);
 
-                    <div class="col-md-3 col-sm-6 justify-content-center">
-                        <!-- col-md-3 col-sm-6 center-responsive Begin -->
-                        <div class="product product-box same-height">
-                            <!-- product same-height Begin -->
-                            <a href="details.php"><img class="img-fluid" src="admin_area/product_images/food.jpg" alt="Product 6"></a>
-                            <div class="text">
-                                <!-- text Begin -->
-                                <h3><a href="details.php">Amapapa</a></h3>
-                                <p class="price">R40</p>
-                            </div><!-- text Finish -->
-                        </div><!-- product same-height Finish -->
-                    </div><!-- col-md-3 col-sm-6 center-responsive Finish -->
+while ($row_products = mysqli_fetch_array($run_products)) {
 
-                    <div class="col-md-3 col-sm-6 justify-content-center">
-                        <!-- col-md-3 col-sm-6 center-responsive Begin -->
-                        <div class="product product-box same-height">
-                            <!-- product same-height Begin -->
-                            <a href="details.php"><img class="img-fluid" src="admin_area/product_images/food.jpg" alt="Product 6"></a>
-                            <div class="text">
-                                <!-- text Begin -->
-                                <h3><a href="details.php">Amapapa</a></h3>
-                                <p class="price">R40</p>
-                            </div><!-- text Finish -->
-                        </div><!-- product same-height Finish -->
-                    </div><!-- col-md-3 col-sm-6 center-responsive Finish -->
+    $pro_id = $row_products['product_id'];
+    $pro_title = $row_products['product_title'];
+    $pro_img1 = $row_products['product_img1'];
+    $pro_price = $row_products['product_price'];
+    $pro_location = $row_products['product_location'];
+
+    echo "
+   
+    <div class='col-lg-3 col-md-3 col-sm-6' align='center'>
+        <div class='product same-height'>
+            <a href='details.php?pro_id=$pro_id'><img class='img-fluid details-image' src='admin_area/product_images/$pro_img1'></a>
+            <div class='text'>
+                <h4> <a href='details.php?pro_id=$pro_id'> $pro_title </a> </h4>
+                <h5 class='location'>$pro_location </h5>
+                <p class='price'> R $pro_price </p>
+            </div>
+        </div>
+    </div>
+   ";
+}
+
+?>
+                    
                 </div>
             <!-- col-md-9 End -->
             
@@ -173,23 +224,23 @@
                                 <!-- tbody Begin -->
                                 <tr>
                                     <!-- tr Begin -->
-                                    <td> Order Sub-Total </td>
-                                    <th> R40 </th>
+                                    <td> Order All Sub-Total </td>
+                                   <th> R<?php echo $total; ?> </th>
                                 </tr><!-- tr Finish -->
                                 <tr>
                                     <!-- tr Begin -->
                                     <td> Shipping and Handling </td>
-                                    <td> R0 </td>
+                                   <td> R0 </td>
                                 </tr><!-- tr Finish -->
                                 <tr>
                                     <!-- tr Begin -->
                                     <td> Tax </td>
-                                    <th> $0 </th>
+                                    <th> R0 </th>
                                 </tr><!-- tr Finish -->
                                 <tr class="total">
                                     <!-- tr Begin -->
                                     <td> Total </td>
-                                    <th> R40 </th>
+                                   <th> R<?php echo $total; ?> </th>
                                 </tr><!-- tr Finish -->
                             </tbody><!-- tbody Finish -->
                         </table><!-- table Finish -->
