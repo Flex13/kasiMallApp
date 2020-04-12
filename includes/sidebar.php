@@ -9,11 +9,7 @@
     <div class="card-body">
         <!-- nav nav-pills nav-stacked category-menu Begin -->
         <ul class="nav nav-pills flex-column category-menu">
-            <li><a href="#">Jackets</a></li>
-            <li><a href="#">Accessories</a></li>
-            <li><a href="#">Shoes</a></li>
-            <li><a href="#">Coats</a></li>
-            <li><a href="#">T-Shirt</a></li>
+            <?php getPCats(); ?> 
         </ul>
         <!-- nav nav-pills nav-stacked category-menu Finish -->
     </div>
@@ -32,10 +28,7 @@
     <div class="card-body">
         <!-- nav nav-pills nav-stacked category-menu Begin -->
         <ul class="nav nav-pills flex-column category-menu">
-            <li><a href="#">Men</a></li>
-            <li><a href="#">Women</a></li>
-            <li><a href="#">Kids</a></li>
-            <li><a href="#">Others</a></li>
+        <?php getCats(); ?>
         </ul>
         <!-- nav nav-pills nav-stacked category-menu Finish -->
     </div>

@@ -7,8 +7,8 @@
             <div class="row">
                 <!-- Col 6 Offer Begin -->
                 <div class="col-md-6 offer">
-                    <a href="#" class="btn btn-success btn-sm">Welcome</a>
-                    <a href="../cart.php">4 Items In Your Cart | Total Price: R300 </a>
+                <a href="#" class="btn btn-success btn-sm">Welcome</a>
+                <a href="cart.php"><?php items(); ?> Items In Your Cart | Total Price: <?php total_price(); ?> </a>
                 </div>
                 <!-- End Col 6 Offer Begin -->
                 <!-- col-md-6 Begin -->
@@ -59,20 +59,20 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarcollapseCMS">
                     <ul class="navbar-nav mx-auto">
-                        <li class=" <?php if ($active == 'Home') echo "active"; ?>">
-                            <a href="index.php" class="nav-link">Home</a>
+                        <li >
+                            <a href="../index.php" class="nav-link">Home</a>
                         </li>
-                        <li class=" <?php if ($active == 'Shop') echo "active"; ?>">
-                            <a href="shop.php" class="nav-link">Shop</a>
+                        <li>
+                            <a href="../shop.php" class="nav-link">Shop</a>
                         </li>
-                        <li class=" <?php if ($active == 'Account') echo "active"; ?>">
+                        <li class="active">
                             <a href="customer/my_account.php" class="nav-link">My Account</a>
                         </li>
-                        <li class=" <?php if ($active == 'Cart') echo "active"; ?>">
-                            <a href="cart.php" class="nav-link">Shopping Cart</a>
+                        <li >
+                            <a href="../cart.php" class="nav-link">Shopping Cart</a>
                         </li>
-                        <li class=" <?php if ($active == 'Contact') echo "active"; ?>">
-                            <a href="contact.php" class="nav-link">Contact Us</a>
+                        <li>
+                            <a href="../contact.php" class="nav-link">Contact Us</a>
                         </li>
                     </ul>
                 </div>

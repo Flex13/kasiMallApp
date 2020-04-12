@@ -8,7 +8,7 @@
                 <!-- Col 6 Offer Begin -->
                 <div class="col-md-6 offer">
                     <a href="#" class="btn btn-success btn-sm">Welcome</a>
-                    <a href="cart.php">4 Items In Your Cart | Total Price: R300 </a>
+                    <a href="cart.php"><?php items(); ?> Items In Your Cart | Total Price: <?php total_price(); ?> </a>
                 </div>
                 <!-- End Col 6 Offer Begin -->
                 <!-- col-md-6 Begin -->

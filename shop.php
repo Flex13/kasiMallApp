@@ -1,4 +1,4 @@
-<?php $active='Shop'; ?>
+<?php $active = 'Shop'; ?>
 <?php include 'includes/header.php'; ?>
 <?php include 'includes/navbar.php'; ?>
 <!-- #content Begin -->
@@ -19,8 +19,13 @@
                     </li>
                 </ul>
                 <!-- breadcrumb Finish -->
-            </div>
-            <!-- col-md-12 Finish -->
+            </div><!-- col-md-12 Finish -->
+        </div>
+        
+        <!-- row End -->
+
+        <!-- row Begin -->
+        <div class="row">
             <!-- col-md-3  col-lg-3  Sidbar Begin -->
             <div class="col-md-3 col-lg-3">
                 <!-- col-md-3 Begin -->
@@ -38,136 +43,117 @@
                 <!-- Store Hot Products Start -->
                 <div id="hot">
                     <!-- Store Hot Box Start -->
-                    <div class="box shop">
-                        <!-- Store Hot Container Start -->
-                        <div class="container">
-                            <!-- col-md-12 Begin -->
-                            <div class="col-md-12">
-                                <h1>Shop</h1>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo deleniti accusamus, consequuntur illum quasi ut. Voluptate a, ipsam repellendus ut fugiat minima? Id facilis itaque autem, officiis veritatis perferendis, quaerat!
-                                </p>
-                            </div>
-                            <!-- col-md-12 Finish -->
-                        </div>
-                        <!-- Store Hot Container End -->
-                    </div>
+                    <?php
+
+                    if (!isset($_GET['p_cat'])) {
+
+                        if (!isset($_GET['cat'])) {
+
+                            echo "
+
+                        <div class='box shop'><!-- box Begin -->
+                            <h1>Shop</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo deleniti accusamus, consequuntur illum quasi ut. Voluptate a, ipsam repellendus ut fugiat minima? Id facilis itaque autem, officiis veritatis perferendis, quaerat!</p>
+                        </div><!-- box Finish -->
+
+                        ";
+                        }
+                    }
+
+                    ?>
                     <!-- Store Hot Box End -->
                 </div>
                 <!-- Store Hot Products End -->
                 <!-- row Begin -->
-                <div class="row">
-                    <!-- col-md-4 col-sm-6 center-responsive Begin -->
-                    <div class="col-md-6 col-sm-12 col-lg-6 center-responsive">
-                        <!-- product Begin -->
-                        <div class="product">
-                            <a href="details.php"><img class="img-fluid product-image" src="admin_area/product_images/food.jpg" alt="Product 1"></a>
-                            <!-- text Begin -->
-                            <div class="text">
-                                <h3><a href="details.php">Amapapa</a></h3>
-                                <h5 class="location">Vanderbijlpark</h5>
-                                <p class="price">$30</p>
-                                <p class="button">
-                                    <a href="details.php" class="btn btn-default">View Details</a>
-                                    <a href="cart.php" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Add To Cart</a>
-                                </p>
+                <div class="row" align="center">
+                <?php 
+                getpcatpro();
+
+                getcatpro();
+                
+                ?>
+                    <?php
+                    if (!isset($_GET['p_cat'])) {
+                        if (!isset($_GET['cat'])) {
+                            $per_page = 6;
+                            if (isset($_GET['page'])) {
+                                $page = $_GET['page'];
+                            } else {
+                                $page = 1;
+                            }
+
+                            $start_from = ($page - 1) * $per_page;
+                            $get_products = "SELECT * FROM products ORDER BY 1 DESC LIMIT $start_from,$per_page";
+                            $run_products = mysqli_query($connect, $get_products);
+
+                            while ($row_products = mysqli_fetch_array($run_products)) {
+
+                                $pro_id = $row_products['product_id'];
+                                $pro_title = $row_products['product_title'];
+                                $pro_location = $row_products['product_location'];
+                                $pro_price = $row_products['product_price'];
+                                $pro_img1 = $row_products['product_img1'];
+
+                                echo "
+                            
+                            <div class='col-md-6 col-sm-12 col-lg-6' align='center'>
+                            <div class='product'>
+                                <a href='details.php?pro_id=$pro_id'>
+                                    <img class='img-fluid product-image' src='admin_area/product_images/$pro_img1'>
+                                </a>
+                                <div class='text'>
+                                    <h3><a href='details.php?pro_id=$pro_id'>$pro_title</a></h3>
+                                    <h5 class='location'>$pro_location</h5>
+                                    <p class='price'>R $pro_price</p>
+                                    <p class='button'>
+                                    <a class='btn btn-default' href='details.php?pro_id=$pro_id'>View Details</a>
+                                    <a class='btn btn-primary' href='details.php?pro_id=$pro_id'><i class='fa fa-shopping-cart'></i> Add to Cart</a>
+                                    </p>
+                                </div>
                             </div>
-                            <!-- text Finish -->
-                        </div><!-- product Finish -->
+                        </div>
+                            ";
+                            }
 
-                    </div>
-                    <!-- col-md-6 col-sm-12 col-lg-6 center-responsive end -->
-
-                    <!-- col-md-4 col-sm-6 center-responsive Begin -->
-                    <div class="col-md-6 col-sm-12 col-lg-6 center-responsive">
-                        <!-- product Begin -->
-                        <div class="product">
-                            <a href="details.php"><img class="img-fluid product-image" src="admin_area/product_images/food.jpg" alt="Product 1"></a>
-                            <!-- text Begin -->
-                            <div class="text">
-                                <h3><a href="details.php">Amapapa</a></h3>
-                                <h5 class="location">Vanderbijlpark</h5>
-                                <p class="price">$30</p>
-                                <p class="button">
-                                    <a href="details.php" class="btn btn-default">View Details</a>
-                                    <a href="details.php" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Add To Cart</a>
-                                </p>
-                            </div>
-                            <!-- text Finish -->
-                        </div><!-- product Finish -->
-
-                    </div>
-                    <!-- col-md-6 col-sm-12 col-lg-6 center-responsive end -->
-                </div>
-                <!-- Row End -->
-
-                <!-- row Begin -->
-                <div class="row">
-                    <!-- col-md-4 col-sm-6 center-responsive Begin -->
-                    <div class="col-md-6 col-sm-12 col-lg-6 center-responsive">
-                        <!-- product Begin -->
-                        <div class="product">
-                            <a href="details.php"><img class="img-fluid product-image" src="admin_area/product_images/food.jpg" alt="Product 1"></a>
-                            <!-- text Begin -->
-                            <div class="text">
-                                <h3><a href="details.php">Amapapa</a></h3>
-                                <h5 class="location">Vanderbijlpark</h5>
-                                <p class="price">$30</p>
-                                <p class="button">
-                                    <a href="details.php" class="btn btn-default">View Details</a>
-                                    <a href="cart.php" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Add To Cart</a>
-                                </p>
-                            </div>
-                            <!-- text Finish -->
-                        </div><!-- product Finish -->
-
-                    </div>
-                    <!-- col-md-6 col-sm-12 col-lg-6 center-responsive end -->
-
-                    <!-- col-md-4 col-sm-6 center-responsive Begin -->
-                    <div class="col-md-6 col-sm-12 col-lg-6 center-responsive">
-                        <!-- product Begin -->
-                        <div class="product">
-                            <a href="details.php"><img class="img-fluid product-image" src="admin_area/product_images/food.jpg" alt="Product 1"></a>
-                            <!-- text Begin -->
-                            <div class="text">
-                                <h3><a href="details.php">Amapapa</a></h3>
-                                <h5 class="location">Vanderbijlpark</h5>
-                                <p class="price">$30</p>
-                                <p class="button">
-                                    <a href="details.php" class="btn btn-default">View Details</a>
-                                    <a href="cart.php" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Add To Cart</a>
-                                </p>
-                            </div>
-                            <!-- text Finish -->
-                        </div><!-- product Finish -->
-
-                    </div>
-                    <!-- col-md-6 col-sm-12 col-lg-6 center-responsive end -->
-                </div>
-                <!-- Row End -->
-                <nav aria-label="...">
+                    ?>
+                    
+                    <div class="col-md-12">
+                <div class="center" >
                     <ul class="pagination">
-                        <li class="page-item disabled">
-                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item active" aria-current="page">
-                            <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">Next</a>
-                        </li>
-                    </ul>
-                </nav>
+                        <!-- pagination Begin -->
+                <?php
+                            $query = "SELECT * FROM products";
+                            $result = mysqli_query($connect, $query);
+                            $total_records = mysqli_num_rows($result);
+                            $total_pages = ceil($total_records / $per_page);
+                            echo "
+                            <a href='shop.php?page=1'> " . 'First Page' . " </a>
+                        ";
+                            for ($i = 1; $i <= $total_pages; $i++) {
+                                echo "
+                            <a class='active' href='shop.php?page=" . $i . "'> " . $i . " </a>
+                        ";
+                            };
+                            echo "
+                            <a href='shop.php?page=$total_pages'> " . 'Last Page' . " </a>
+                        ";
+                        }
+                    }
+                ?>
+                    </ul><!-- pagination Finish -->
+                </div>
+                </div>
+                
+                </div>
+<!-- Row End -->
+                <!-- col-md-9 End -->
             </div>
-            <!-- col-md-9 End -->
+            <!-- row End -->
         </div>
-        <!-- row End -->
+<!-- row End -->
     </div>
-    <!-- container End -->
-</div>
-<!-- #content End -->
+        <!-- container End -->
+    </div>
+    <!-- #content End -->
 
-<?php include 'includes/footer.php'; ?>
+    <?php include 'includes/footer.php'; ?>
