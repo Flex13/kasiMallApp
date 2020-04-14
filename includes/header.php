@@ -1,9 +1,4 @@
-<?php 
-include("includes/db.php");
-include("functions/functions.php");
-include("functions/mail.php");
-?>
-
+<?php include("functions/main_functions.php"); ?>
 <?php 
 
 if(isset($_GET['pro_id'])){

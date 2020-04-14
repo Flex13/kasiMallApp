@@ -1,5 +1,8 @@
 <?php include 'includes/header.php'; ?>
 <?php include 'includes/navbar.php'; ?>
+
+<?php Register::RegisterCustomer(); ?>
+
 <!-- #content Begin -->
 <div id="content">
     <!-- container Begin -->
@@ -50,12 +53,29 @@
                             <h2> Register A New Account</h2>
                         </center><!-- center Finish -->
 
-                        <form action="customer_register.php.php" method="post" enctype="multipart/form-data">
+                        <form action="customer_register.php" method="post" enctype="multipart/form-data">
+                            <!-- form Begin -->
+
+                            <?php echo errorMessage(); ?>
+                            <?php echo successMessage(); ?>
+
+                            <div class="form-group">
+                                <!-- form-group Begin -->
+                                <label>Username</label>
+                                <input type="text" class="form-control" name="c_username" required>
+                            </div><!-- form-group Finish -->
+
+                            <div class="form-group">
+                                <!-- form-group Begin -->
+                                <label>First Name</label>
+                                <input type="text" class="form-control" name="c_firstname" required>
+                            </div><!-- form-group Finish -->
+
                             <!-- form Begin -->
                             <div class="form-group">
                                 <!-- form-group Begin -->
-                                <label>Your Name</label>
-                                <input type="text" class="form-control" name="C_name" required>
+                                <label>Surname</label>
+                                <input type="text" class="form-control" name="c_surname" required>
                             </div><!-- form-group Finish -->
 
                             <div class="form-group">
@@ -66,6 +86,24 @@
 
                             <div class="form-group">
                                 <!-- form-group Begin -->
+                                <label>Contact Details</label>
+                                <input type="tel" class="form-control" name="c_phone" required>
+                            </div><!-- form-group Finish -->
+
+                            <div class="form-group">
+                                <!-- form-group Begin -->
+                                <label>Your Gender</label>
+                                <select name="c_gender" class="form-control" required>
+                                    <option value="">Please select Gender</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+                            </div><!-- form-group Finish -->
+
+
+
+                            <div class="form-group">
+                                <!-- form-group Begin -->
                                 <label>Your Password</label>
                                 <input type="password" class="form-control" name="c_password" required>
                             </div><!-- form-group Finish -->
@@ -73,7 +111,9 @@
                             <div class="form-group">
                                 <!-- form-group Begin -->
                                 <label>Your Country</label>
-                                <input type="text" class="form-control" name="c_country" required>
+                                <select name="c_country" class="form-control" required>
+                                    <option value="South Africa">South Africa</option>
+                                </select>
                             </div><!-- form-group Finish -->
 
                             <div class="form-group">
@@ -84,27 +124,42 @@
 
                             <div class="form-group">
                                 <!-- form-group Begin -->
-                                <label>Your Contact Details</label>
-                                <input type="tel" class="form-control" name="c_contact" required>
+                                <label>Date of Birth</label><br>
+                                <label for="day">Day:</label>
+                                <select name="c_day" class="DOB">
+                                    <?php
+                                    for ($x = 1; $x <= 31; $x++) {
+                                        if ($x == date("j")) echo "<option value='$x' selected>$x</option>";
+                                        else echo "<option>$x</option>";
+                                    }
+                                    ?>
+                                </select>
+
+                                <label for="day">Month:</label>
+                                <select name="c_month" class="DOB">
+                                    <?php
+                                    for ($x = 1; $x <= 12; $x++) {
+                                        if ($x == date("m")) echo "<option value='$x' selected>$x</option>";
+                                        else echo "<option>$x</option>";
+                                    }
+                                    ?>
+                                </select>
+                                <label for="day">Year:</label>
+                                <select name="c_year" class="DOB">
+                                    <?php
+                                    for ($x = date("Y"); $x >= (date("Y") - 100); $x--) {
+                                        echo "<option value='$x'>$x</option>";
+                                    }
+                                    ?>
+                                </select>
+
                             </div><!-- form-group Finish -->
 
-                            <div class="form-group">
-                                <!-- form-group Begin -->
-                                <label>Your Address</label>
-                                <input type="text" class="form-control" name="c_address" required>
-                            </div><!-- form-group Finish -->
 
-                            <div class="form-group">
-                                <!-- form-group Begin -->
-                                <label>Your Profile Picture</label>
-                                <input type="file" class="form-height-custom" name="c_image" required>
-                            </div><!-- form-group Finish -->
-
-                            
 
                             <div class="text-center my-3">
                                 <!-- text-center Begin -->
-                                <button type="submit" name="submit" class="btn btn-primary">
+                                <button type="submit" name="register" class="btn btn-primary">
                                     <i class="fa fa-user-md"></i> Register
                                 </button>
                             </div><!-- text-center Finish -->
@@ -125,5 +180,7 @@
     <!-- container End -->
 </div>
 <!-- #content End -->
+
+
 
 <?php include 'includes/footer.php'; ?>

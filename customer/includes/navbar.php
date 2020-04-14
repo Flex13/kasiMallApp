@@ -7,8 +7,22 @@
             <div class="row">
                 <!-- Col 6 Offer Begin -->
                 <div class="col-md-6 offer">
-                <a href="#" class="btn btn-success btn-sm">Welcome</a>
-                <a href="cart.php"><?php items(); ?> Items In Your Cart | Total Price: <?php total_price(); ?> </a>
+                    <a href="#" class="btn btn-success btn-sm">
+                    <?php 
+                    
+                    if(!isset($_SESSION['customer_email'])){
+                        
+                        echo "Welcome: Guest";
+                        
+                    }else{
+                        
+                        echo "Welcome: " . $_SESSION['customer_email'] . "";
+                        
+                    }
+                    
+                    ?>
+                    </a>
+                    <a href="cart.php"><?php items(); ?> Items In Your Cart | Total Price: <?php total_price(); ?> </a>
                 </div>
                 <!-- End Col 6 Offer Begin -->
                 <!-- col-md-6 Begin -->
@@ -31,7 +45,18 @@
                             <a href="../cart.php"><i class="fa fa-shopping-cart"></i> Go To Cart</a>
                         </li>
                         <li>
-                            <a href="checkout.php">Login</a>
+                            <a href="#">
+                                <?php
+                                    if (!isset($_SESSION['customer_email'])) {
+
+                                        echo "<a href='../checkout.php'> Login </a>";
+                                    } else {
+
+                                        echo " <a href='../logout.php'> Log Out </a> ";
+                                    }
+
+                                    ?>
+                            </a>
                         </li>
                     </ul>
                     <!-- menu Finish -->
@@ -59,16 +84,16 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarcollapseCMS">
                     <ul class="navbar-nav mx-auto">
-                        <li >
+                        <li>
                             <a href="../index.php" class="nav-link">Home</a>
                         </li>
                         <li>
                             <a href="../shop.php" class="nav-link">Shop</a>
                         </li>
                         <li class="active">
-                            <a href="customer/my_account.php" class="nav-link">My Account</a>
+                            <a href="my_account.php" class="nav-link">My Account</a>
                         </li>
-                        <li >
+                        <li>
                             <a href="../cart.php" class="nav-link">Shopping Cart</a>
                         </li>
                         <li>

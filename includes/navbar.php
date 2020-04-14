@@ -7,7 +7,21 @@
             <div class="row">
                 <!-- Col 6 Offer Begin -->
                 <div class="col-md-6 offer">
-                    <a href="#" class="btn btn-success btn-sm">Welcome</a>
+                    <a href="#" class="btn btn-success btn-sm">
+                    <?php 
+                    
+                    if(!isset($_SESSION['customer_email'])){
+                        
+                        echo "Welcome: Guest";
+                        
+                    }else{
+                        
+                        echo "Welcome: " . $_SESSION['customer_email'] . "";
+                        
+                    }
+                    
+                    ?>
+                    </a>
                     <a href="cart.php"><?php items(); ?> Items In Your Cart | Total Price: <?php total_price(); ?> </a>
                 </div>
                 <!-- End Col 6 Offer Begin -->
@@ -31,7 +45,21 @@
                             <a href="cart.php"><i class="fa fa-shopping-cart"></i> Go To Cart</a>
                         </li>
                         <li>
-                            <a href="checkout.php">Login</a>
+                            <a href="checkout.php">
+                                <?php 
+                            
+                            if(!isset($_SESSION['customer_email'])){
+                        
+                                    echo "<a href='checkout.php'> Login </a>";
+
+                                }else{
+
+                                    echo " <a href='logout.php'> Log Out </a> ";
+
+                                }
+                            
+                            ?>
+                            </a>
                         </li>
                     </ul>
                     <!-- menu Finish -->

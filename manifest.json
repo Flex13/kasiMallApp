@@ -1,0 +1,25 @@
+{
+    "name": "Kasi Mall Online",
+    "short_name": "KMA",
+    "lang": "en-US",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#FFF",
+    "theme_color": "#FF7200",
+    "orientation": "any",
+    "description": "Kasi Mall Online Houses App",
+    "icons": [
+      {
+        "src": "images/kasilogo.jpg",
+        "sizes": "192x192",
+        "type": "image/jpg"
+      }
+    ],
+    
+    "dir": "ltr",
+    "scope": "/",
+    "serviceworker": {
+        "src" : "service-worker.js",
+        "scope" : "/"
+    } 
+  }
