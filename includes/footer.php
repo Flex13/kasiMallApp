@@ -12,7 +12,20 @@
                     <li><a href="cart.php">Shopping Cart</a></li>
                     <li><a href="contact.php">Contact Us</a></li>
                     <li><a href="shop.php">Shop</a></li>
-                    <li><a href="customer/my_account.php">My Account</a></li>
+                    <li><a href="customer/my_account.php">
+                    <?php
+                    if(!isset($_SESSION['customer_email'])){
+                               
+                               echo"<a href='checkout.php'>My Account</a>";
+                               
+                           }else{
+                               
+                              echo"<a href='customer/my_account.php?my_orders'>My Account</a>"; 
+                               
+                           }
+                           
+                           ?>
+                </a></li>
                 </ul>
                 <!-- ul Finish -->
                 <hr>
@@ -20,8 +33,22 @@
                 <h4>User Section</h4>
                 <!-- ul Begin -->
                 <ul>
-                    <li><a href="checkout.php">Login</a></li>
-                    <li><a href="customer_register">Register</a></li>
+                    <li><a href="checkout.php">
+                    <?php 
+                           
+                           if(!isset($_SESSION['customer_email'])){
+                               
+                               echo"<a href='checkout.php'>Login</a>";
+                               
+                           }else{
+                               
+                              echo"<a href='customer/my_account.php?my_orders'>My Account</a>"; 
+                               
+                           }
+                           
+                           ?>
+                    </a></li>
+                    <li><a href="customer_register.php">Register</a></li>
                 </ul>
                 <!-- ul Finish -->
 

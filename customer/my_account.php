@@ -1,6 +1,19 @@
+
+<?php 
+
+session_start();
+
+if(!isset($_SESSION['customer_email'])){
+    
+    echo "<script>window.open('../checkout.php','_self')</script>";
+    
+}else{
+?>
 <?php $active='Account'; ?>
 <?php include 'includes/header.php'; ?>
 <?php include 'includes/navbar.php'; ?>
+
+
 <!-- #content Begin -->
 <div id="content">
     <!-- container Begin -->
@@ -75,3 +88,5 @@
 
 
 <?php include 'includes/footer.php'; ?>
+
+<?php } ?>

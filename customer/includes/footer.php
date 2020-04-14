@@ -11,7 +11,7 @@
                 <ul>
                     <li><a href="../cart.php">Shopping Cart</a></li>
                     <li><a href="../contact.php">Contact Us</a></li>
-                    <li><a href="../applications.html">Shop</a></li>
+                    <li><a href="../shop.php">Shop</a></li>
                     <li><a href="my_account.php">My Account</a></li>
                 </ul>
                 <!-- ul Finish -->
@@ -20,8 +20,33 @@
                 <h4>User Section</h4>
                 <!-- ul Begin -->
                 <ul>
-                    <li><a href="checkout.php">Login</a></li>
-                    <li><a href="../customer_register.php">Register</a></li>
+                    <?php 
+                           
+                           if(!isset($_SESSION['customer_email'])){
+                               
+                               echo"<li><a href='../checkout.php'>Login</a></li>";
+                               
+                           }else{
+                               
+                              echo"<li><a href='my_account.php?my_orders'>My Orders</a></li>"; 
+                               
+                           }
+                           
+                           ?>
+                    
+                    <?php 
+                           
+                           if(!isset($_SESSION['customer_email'])){
+                               
+                               echo"<li><a href='../checkout.php'>Login</a></li>";
+                               
+                           }else{
+                               
+                              echo"<li><a href='my_account.php?edit_account'>Edit Account</a></li>"; 
+                               
+                           }
+                           
+                           ?>
                 </ul>
                 <!-- ul Finish -->
 
@@ -47,7 +72,7 @@
                         
                         echo "
                             <li>
-                                <a href='shop.php?p_cat=$p_cat_id'>$p_cat_title</a>
+                                <a href='../shop.php?p_cat=$p_cat_id'>$p_cat_title</a>
                             </li>
                         ";
                     }
@@ -99,9 +124,9 @@
                 <h4>Keep In Touch</h4>
                 
                 <p class="social">
-                    <a href="#" class="icon1 fab  fa-facebook"></a>
-                    <a href="#" class="icon1 fab fa-twitter"></a>
-                    <a href="#" class="icon1 fab fa-instagram"></a>
+                    <a href="../#" class="icon1 fab  fa-facebook"></a>
+                    <a href="../#" class="icon1 fab fa-twitter"></a>
+                    <a href="../#" class="icon1 fab fa-instagram"></a>
                 </p>
 
             </div>

@@ -51,7 +51,7 @@ class Register {
                                                             $password = md5($c_pass);
         
         
-                                                        $insert_customer = "INSERT INTO customers (customer_username,customer_name,customer_surname,customer_email,customer_phone,customer_dob,customer_gender,customer_password,customer_country,customer_city,customer_reg_date,customer_ip) values ('$c_username','$c_firstname','$c_surname','$c_email','$c_phone','$c_dob','$c_gender','$password','$c_country','$c_city',NOW(),'$c_ip')";
+                                                        $insert_customer = "INSERT INTO customers (customer_username,customer_name,customer_surname,customer_email,customer_phone,customer_dob,customer_gender,customer_password,customer_country,customer_city,customer_reg_date,customer_image,customer_ip) values ('$c_username','$c_firstname','$c_surname','$c_email','$c_phone','$c_dob','$c_gender','$password','$c_country','$c_city',NOW(),'avatar.png',$c_ip')";
         
                                                         $run_customer = mysqli_query($connect, $insert_customer);
                                                         $sel_cart = "SELECT * FROM cart WHERE ip_add='$c_ip'";
@@ -63,12 +63,13 @@ class Register {
         
                                                             $_SESSION['customer_email'] = $c_email;
                                                             $_SESSION["successMessage"] = "You have been Registered Successfully";
-                                                            Redirect::redirect_to("checkout.php");
+                                                            echo "<script>window.open('checkout.php','_self')</script>";
                                                             exit(); // Quit the script.
                                                         } else {
                                                             /// If register without items in cart ///
                                                             $_SESSION['customer_email'] = $c_email;
                                                             $_SESSION["successMessage"] = "You have been Registered Successfully";
+                                                            echo "<script>window.open('index.php','_self')</script>";
                                                         }
                                                     } else {
                                                         $_SESSION["errorMessage"] = "You must be older the 15 year";

@@ -41,7 +41,7 @@ if(isset($_GET['pro_id'])){
     <link rel="stylesheet" href="font-awsome/css/all.min.css" />
     <link rel="stylesheet" href="styles/bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" href="styles/style.css" />
-    <script defer src="font-awsome/js/all.js"></script>
+    <script defer src="font-awsome/js/all.min.js"></script>
     <script src="https://kit.fontawesome.com/f9b723c806.js" crossorigin="anonymous"></script>
     <title>Kasi Mall Online</title>
 </head>

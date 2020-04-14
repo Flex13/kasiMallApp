@@ -39,7 +39,7 @@
             </div>
             <!-- col-md-3  col-lg-3  Sidbar End -->
 
-            <div id="login" class="col-md-9">
+            <div  class="col-md-9">
                 <!-- col-md-9 Begin -->
 
                 <?php

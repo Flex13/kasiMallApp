@@ -1,3 +1,15 @@
+
+<?php 
+
+session_start();
+
+if(!isset($_SESSION['customer_email'])){
+    
+    echo "<script>window.open('../checkout.php','_self')</script>";
+    
+}else{
+?>
+
 <?php include 'includes/header.php'; ?>
 <?php include 'includes/navbar.php'; ?>
 <!-- #content Begin -->
@@ -107,3 +119,4 @@
 
 
 <?php include 'includes/footer.php'; ?>
+<?php } ?>

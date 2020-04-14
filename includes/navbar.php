@@ -94,7 +94,19 @@
                             <a href="shop.php" class="nav-link">Shop</a>
                         </li>
                         <li class=" <?php if ($active == 'Account') echo "active"; ?>">
-                            <a href="customer/my_account.php" class="nav-link">My Account</a>
+                        <?php 
+                           
+                           if(!isset($_SESSION['customer_email'])){
+                               
+                               echo"<a href='checkout.php' class='nav-link'>My Account</a>";
+                               
+                           }else{
+                               
+                              echo"<a href='customer/my_account.php?my_orders' class='nav-link'>My Account</a>"; 
+                               
+                           }
+                           
+                           ?>
                         </li>
                         <li class=" <?php if ($active == 'Cart') echo "active"; ?>">
                             <a href="cart.php" class="nav-link">Shopping Cart</a>
